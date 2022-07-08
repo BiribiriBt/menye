@@ -1,37 +1,47 @@
 const fs = require('fs')
 const chalk = require('chalk')
+const  { indonesia, english} = require(`./language`)
 
 // Website Api
 global.APIs = {
-	alfa: 'https://api-alphabot.herokuapp.com',
+	alfa: 'https://api.zeeoneofc.xyz', //apabila link api eror, segera laporkan ke owner
 }
 
 // Free apikey
 global.APIKeys = {
-	'https://api-alphabot.herokuapp.com': 'Alphabot',
+	'https://api.zeeoneofc.xyz': 'V12',  // login https://api.zeeoneofc.xyz to get apikey || https://api-alphabot.herokuapp.com
 }
 
 // setting 
-global.autoread = true // auto read pesan / message
-global.autorecording = true //status auto merekam ( auto record )
-global.autoketik = false //status auto mengetik (auto typing)
-global.available = false //status online (online)
+global.autoread = false // auto read pesan / message
+global.autobio = true 
+
+//language
+//Available in indonesia & english
+//You can request others language 
+global.language = english  //change indonesia to english if you don't understand the language used by the bot
+
 
 // Other
-global.botname = "Loli-Mdོ"
-global.ownername= "ᴹᴿ᭄ Kyouka ×፝֟͜×"
-global.myweb ="https://api-alphabot.herokuapp.com/"
-global.youtube = "https://instagram.com/ruka.nime7"
-global.github = "https://Neko-Yuri.github.io/"
-global.ownernomer = "6282112080081"
-global.ownernomerr = "+6282112080081"
-global.thumbnail = "./image/lol.jpg"
-global.donasi = "./image/donasi.jpg"
+global.botname = "𝐀𝐧𝐝𝐡𝐲𝐜𝐚𝐁𝐨𝐭𝐳-𝐌𝐝ོ" //namabot kalian
+global.ownername= "︎ᴹᴿ᭄ 𝔸𝕟𝕕𝕙𝕪𝕔𝕒𝔾𝕒𝕟𝕫ོ ×፝֟͜×" //nama kalian
+global.myweb ="https://instagram.com/andhycarsrofficial?igshid=YmMyMTA2M2Y=" //bebas asal jan hapus
+global.youtube = "https://youtube.com/channel/UCtt_8qM9i8x83BY_U8oozOg" //bebas asal jan hapus
+global.github = "https://github.com/biribiriBt" //bebas
+global.email = "AndhycaBotz@gmail.com" //bebas
+global.region = "Korea Selatan" //bebas
+global.timezone = 'Asia/Jakarta' //  timezone wib
+global.owner = ["6285872761910","6285794408499","62895330584590"] //ganti agar fitur owner bisa di gunakan
+global.ownernomer = "6285872761910","6285794408498" // nomor wa kalian
+global.ownernomerr = "+6285872761910","+6285794408499" //nmr wa kalian
+global.thumbnail = "./image/dhika.jpg" // ini lol.jpg adalah nama foto di folder image. untuk foto bot
+global.donasi = "./image/donate.jpg" // foto donasi di folder image
 global.background_welcome="https://telegra.ph/file/90a931648de597820bc08.jpg" // maks size 30kb, agar welcome image nya tdk delay
-global.owner = ["6282112080081","6282112080081","6282112080081"] //ganti agar fitur owner bisa di gunakan
-global.packname = '© Loli-Mdོ' //sticker wm
-global.author = 'ᴹᴿ᭄ Kyouka ×፝֟͜×' //sticker wm
+
+global.packname = '© AndhycaBotz-Mdོ' //sticker wm ubah
+global.author = 'Di Buat Oleh ᴹᴿ᭄ 𝔸𝕟𝕕𝕙𝕪𝕔𝕒𝔾𝕒𝕟𝕫ོ ×፝֟͜×︎︎' //sticker wm ganti nama kalian
 global.sessionName = 'session'
+global.typemenu = 'templateLocation'
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
